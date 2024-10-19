@@ -15,9 +15,6 @@
         color: #ffffff !important; /* Ensure links are white in responsive mode */
         text-align: left !important; /* Align text to the left for consistency */
     }
-    .nav-link:hover{
-        color: #ffcc02;
-    }
     .nav-link:active{
         color: #ffcc02 !important;
     }
@@ -33,10 +30,21 @@
     .bg-yellowish{
         background: #ffcc02;
     }
-    .nav-link{
-        text-transform: uppercase;
-        font-weight: bold;
+    .nav-link:hover{
+        color: #ffffff;
     }
+    .nav-link{
+        text-transform:capitalize;
+        font-weight: bold;
+        color: #000000;
+        padding-right:20px !important; 
+    }
+    .btn-dark:hover{
+        background: #ffffff;
+        color: #000000;
+        border: none;
+    }
+    
     
     .dropdown-mega .dropdown-menu {
     padding: 0;
@@ -64,6 +72,12 @@
 }
 .dropdown-mega .dropdown-menu .list-group a {
     font-weight: bold;
+}
+.nav-item.dropdown-mega:hover .dropdown-menu {
+    display: block;
+}
+.nav-item.dropdown-mega:hover .nav-link.dropdown-toggle::after {
+    transform: rotate(180deg); /* Flip the arrow upward on hover */
 }
 /* Responsive Styles for Mobile */
 @media (max-width: 768px) {
@@ -120,7 +134,9 @@
         display: block;
         width: 100%; /* Ensure full width for alignment */
     }
-
+    .nav-item{
+        width: 100%;
+    }
     /* Ensure offcanvas opens properly */
     .offcanvas-body {
         padding-left: 15px;
@@ -130,13 +146,16 @@
         background-color: #ffcc02!important;
         opacity: 1;
     }
+    .btn-dark-sm{
+            display: none;
+        }
 }
 
   </style>
   <body>
     <nav class="navbar navbar-expand-lg bg-yellowish fixed-top pt-3 pb-3">
         <div class="container">
-          <a class="btn btn-dark btn-dark-lg" href="#">Offcanvas navbar</a>
+          <a class="btn btn-dark btn-dark-lg" href="#">SPILL KITS & ABSORBANTS AVAILABLE</a>
           <button class="navbar-toggler border-0 shadow-none text-dark bg-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -147,10 +166,13 @@
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-start align-items-center flex-grow-1  pe-3 ">
-                <li class="nav-item w-100">
+                <li class="nav-item ">
                   <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
-                <li class="nav-item dropdown  dropdown-mega position-static " id="navbarScroll">
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item  dropdown  dropdown-mega position-static " id="navbarScroll">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Products
                     </a>
@@ -195,13 +217,10 @@
                         </div>
                     </div>
                 </li>
-                <li class="nav-item w-100">
-                  <a class="nav-link" href="#">About Us</a>
+                <li class="nav-item ">
+                  <a class="nav-link" href="#">Retail Garage</a>
                 </li>
-                <li class="nav-item w-100">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-                <li class="nav-item dropdown dropdown-mega position-static " id="navbarScroll">
+                <li class="nav-item  dropdown dropdown-mega position-static " id="navbarScroll">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Services
                     </a>
@@ -254,14 +273,17 @@
                         </div>
                     </div>
                 </li>
-                <li class="nav-item w-100">
-                    <a class="nav-link" href="#">Link</a>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">Contact Us</a>
                 </li>
-                <li class="nav-item w-100">
-                    <a class="nav-link" href="#">Link</a>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">Blogs</a>
                 </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">FAQ's</a>
+                </li>
+                <a class="btn btn-dark btn-dark-sm fw-normal border-0" href="#">>>SPILL KITS & ABSORBANTS AVAILABLE</a>
               </ul>
-              <a class="btn btn-dark btn-dark-sm" href="#">Offcanvas navbar wqnwkenenkwnk</a>
             </div>
           </div>
         </div>
