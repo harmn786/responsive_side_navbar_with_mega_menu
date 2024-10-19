@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <style>
+    @media(max-width:991px){
+        .sidebar{
+        background-color: #000000;
+    }
+    .nav-link{
+        color: #ffffff !important; /* Ensure links are white in responsive mode */
+        text-align: left !important; /* Align text to the left for consistency */
+    }
+    .nav-link:hover{
+        color: #ffcc02;
+    }
+    .nav-link:active{
+        color: #ffcc02 !important;
+    }
+    .btn-dark-sm{
+            display: block;
+        }
+    }
+    @media(min-width:991px){
+        .btn-dark-lg{
+            display: none;
+        }
+    }
+    .bg-yellowish{
+        background: #ffcc02;
+    }
+    .nav-link{
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .dropdown-mega .dropdown-menu {
+    padding: 0;
+    width: 100%; /* This keeps it aligned within the .container */
+    overflow: hidden;
+    position: absolute;
+    left: 0; /* Align with the container */
+    right: 0; /* Align with the container */
+    max-width: 1140px; /* or whatever the max-width of your container is */
+    margin: 0 auto; /* Center it */
+}
+
+.dropdown-mega .mega-content .container {
+    max-width: 1140px; /* Match the container width to limit it */
+    margin: 0 auto;
+    padding: 0; /* Adjust padding as necessary */
+}
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .dropdown-mega .dropdown-menu {
+        position: static; /* Make it flow with the document */
+        background: #00000097;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .dropdown-mega .mega-content .container {
+        padding: 0 ; /* Reduce padding for small screens */
+    }
+
+    .dropdown-mega .mega-content .row {
+        flex-direction: column; /* Stack the columns */
+    }
+
+    .dropdown-mega .col-lg-3, .dropdown-mega .col-sm-6 {
+        width: 100%; /* Make columns full width */
+    }
+
+    .dropdown-mega .mega-content {
+        padding: 10px; /* Adjust padding for content */
+    }
+    .nav-link{
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+    .dropdown-mega .dropdown-menu .list-group a {
+        padding: 12px 10px; /* Adjust padding for smaller links */
+        font-size: 14px; /* Reduce font size slightly */
+        color:#ffffff ;
+        text-transform: capitalize !important;
+        text-decoration: none;
+    }
+    .dropdown-mega .mega-content .container{
+        background-color: #000000;
+    }
+    .dropdown-mega .dropdown-menu .list-group .list-group-item{
+        border-bottom: none !important;
+        background: #000000;
+    }
+     /* Force Mega Menu link to align left */
+     .dropdown-mega, .dropdown-mega .nav-link {
+        text-align: left !important; /* Force mega menu and its links to align left */
+        display: block;
+        width: 100%; /* Ensure full width for alignment */
+    }
+
+    /* Ensure offcanvas opens properly */
+    .offcanvas-body {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    button.btn-close{
+        background-color: #ffcc02!important;
+        opacity: 1;
+    }
+}
+
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-yellowish fixed-top pt-3 pb-3">
+        <div class="container">
+          <a class="btn btn-dark btn-dark-lg" href="#">Offcanvas navbar</a>
+          <button class="navbar-toggler border-0 shadow-none text-dark bg-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><a class="navbar-brand text-white" href="#">Offcanvas navbar</a></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-start align-items-center flex-grow-1  pe-3 ">
+                <li class="nav-item w-100">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown dropdown-mega position-static " id="navbarScroll">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Mega Menu
+                    </a>
+                    <div class="dropdown-menu shadow ">
+                        <div class="mega-content ">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-3 col-sm-6 py-xl-4 px-xl-5">
+                                            <div class="list-group">
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+
+                                            </div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6  py-xl-4 px-xl-5 ">
+                                            <div class="list-group">
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                
+                                            </div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6  py-xl-4 px-xl-5 ">
+                                            <div class="list-group">
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                
+                                            </div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6  px-xl-5  bg-dark">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item w-100">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item w-100">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="dropdown w-100">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item " href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item w-100">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item w-100">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+              </ul>
+              <a class="btn btn-dark btn-dark-sm" href="#">Offcanvas navbar wqnwkenenkwnk</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>
