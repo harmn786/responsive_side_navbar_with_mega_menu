@@ -37,6 +37,7 @@
         text-transform: uppercase;
         font-weight: bold;
     }
+    
     .dropdown-mega .dropdown-menu {
     padding: 0;
     width: 100%; /* This keeps it aligned within the .container */
@@ -47,11 +48,22 @@
     max-width: 1140px; /* or whatever the max-width of your container is */
     margin: 0 auto; /* Center it */
 }
-
+.dropdown-mega .dropdown-menu .list-group .list-group-item{
+        border: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+        border-bottom: 1px solid gray !important;
+    }
+    .dropdown-mega .dropdown-menu .list-group .list-group-item:last-child{
+        border-bottom: none !important;
+    }
 .dropdown-mega .mega-content .container {
     max-width: 1140px; /* Match the container width to limit it */
     margin: 0 auto;
     padding: 0; /* Adjust padding as necessary */
+}
+.dropdown-mega .dropdown-menu .list-group a {
+    font-weight: bold;
 }
 /* Responsive Styles for Mobile */
 @media (max-width: 768px) {
@@ -62,7 +74,6 @@
         max-width: 100%;
         margin: 0;
     }
-
     .dropdown-mega .mega-content .container {
         padding: 0 ; /* Reduce padding for small screens */
     }
@@ -73,6 +84,7 @@
 
     .dropdown-mega .col-lg-3, .dropdown-mega .col-sm-6 {
         width: 100%; /* Make columns full width */
+
     }
 
     .dropdown-mega .mega-content {
@@ -88,13 +100,19 @@
         color:#ffffff ;
         text-transform: capitalize !important;
         text-decoration: none;
+        font-weight: lighter;
     }
     .dropdown-mega .mega-content .container{
         background-color: #000000;
     }
     .dropdown-mega .dropdown-menu .list-group .list-group-item{
-        border-bottom: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        outline: none !important;
         background: #000000;
+    }
+    .dropdown-mega .dropdown-menu .list-group{
+        border: none !important;
     }
      /* Force Mega Menu link to align left */
      .dropdown-mega, .dropdown-mega .nav-link {
@@ -132,9 +150,9 @@
                 <li class="nav-item w-100">
                   <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
-                <li class="nav-item dropdown dropdown-mega position-static " id="navbarScroll">
+                <li class="nav-item dropdown  dropdown-mega position-static " id="navbarScroll">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Mega Menu
+                      Products
                     </a>
                     <div class="dropdown-menu shadow ">
                         <div class="mega-content ">
@@ -178,23 +196,63 @@
                     </div>
                 </li>
                 <li class="nav-item w-100">
-                  <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link" href="#">About Us</a>
                 </li>
                 <li class="nav-item w-100">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Contact Us</a>
                 </li>
-                <li class="dropdown w-100">
+                <li class="nav-item dropdown dropdown-mega position-static " id="navbarScroll">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
+                      Services
                     </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li>
-                        <hr class="dropdown-divider">
-                      </li>
-                      <li><a class="dropdown-item " href="#">Something else here</a></li>
-                    </ul>
+                    <div class="dropdown-menu shadow ">
+                        <div class="mega-content ">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-3 col-sm-6 py-xl-4 px-xl-5">
+                                            <div class="list-group">
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+
+                                            </div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6  py-xl-4 px-xl-5 ">
+                                            <div class="list-group">
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                
+                                            </div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6  py-xl-4 px-xl-5 ">
+                                            <div class="list-group">
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                <a href="" class="list-group-item">Accodomodation</a>
+                                                
+                                            </div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6  py-xl-4 px-xl-5 ">
+                                        <div class="list-group">
+                                            <a href="" class="list-group-item">Accodomodation</a>
+                                            <a href="" class="list-group-item">Accodomodation</a>
+                                            <a href="" class="list-group-item">Accodomodation</a>
+                                            <a href="" class="list-group-item">Accodomodation</a>
+                                            <a href="" class="list-group-item">Accodomodation</a>
+                                            
+                                        </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li class="nav-item w-100">
                     <a class="nav-link" href="#">Link</a>
