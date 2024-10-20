@@ -21,10 +21,17 @@
     .btn-dark-sm{
             display: block;
         }
+    
     }
     @media(min-width:991px){
         .btn-dark-lg{
             display: none;
+        }
+        .nav-item.dropdown-mega:hover .dropdown-menu {
+        display: block;
+        }
+        .nav-item.dropdown-mega:hover .nav-link.dropdown-toggle::after {
+            transform: rotate(180deg); /* Flip the arrow upward on hover */
         }
     }
     .bg-yellowish{
@@ -37,7 +44,7 @@
         text-transform:capitalize;
         font-weight: bold;
         color: #000000;
-        padding-right:20px !important; 
+        padding-right:12px !important; 
     }
     .btn-dark:hover{
         background: #ffffff;
@@ -45,7 +52,9 @@
         border: none;
     }
     
-    
+    a.nav-link{
+        font-size: 18px !important;
+    }
     .dropdown-mega .dropdown-menu {
     padding: 0;
     width: 100%; /* This keeps it aligned within the .container */
@@ -72,12 +81,6 @@
 }
 .dropdown-mega .dropdown-menu .list-group a {
     font-weight: bold;
-}
-.nav-item.dropdown-mega:hover .dropdown-menu {
-    display: block;
-}
-.nav-item.dropdown-mega:hover .nav-link.dropdown-toggle::after {
-    transform: rotate(180deg); /* Flip the arrow upward on hover */
 }
 /* Responsive Styles for Mobile */
 @media (max-width: 768px) {
@@ -137,11 +140,7 @@
     .nav-item{
         width: 100%;
     }
-    /* Ensure offcanvas opens properly */
-    .offcanvas-body {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+
     button.btn-close{
         background-color: #ffcc02!important;
         opacity: 1;
@@ -149,6 +148,9 @@
     .btn-dark-sm{
             display: none;
         }
+    .navbar-toggler{
+        padding: 4px 6px;
+    }
 }
 
   </style>
